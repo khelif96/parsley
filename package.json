@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.14",
   "type": "commonjs",
+  "main": "main.js",
   "scripts": {
     "bootstrap-logkeeper": "./scripts/bootstrap-logkeeper.sh",
     "build": "tsc && . ./scripts/app-version.sh && GIT_SHA=`git rev-parse HEAD` vite build",
@@ -23,6 +24,7 @@
     "eslint:fix": "yarn eslint:strict --fix",
     "eslint:staged": "STRICT=1 eslint",
     "eslint:strict": "STRICT=1 eslint '*.{js,ts,tsx}' 'src/**/*.ts?(x)' 'cypress/**/*.ts'",
+    "desktop": "yarn build:beta && electron .",
     "prepare": "husky install",
     "prettier": "prettier --write",
     "preview": "serve -s dist -p 4173",
@@ -103,6 +105,7 @@
     "@vitejs/plugin-react": "2.0.1",
     "babel-loader": "^8.2.5",
     "cypress": "10.9.0",
+    "electron": "^22.0.0",
     "env-cmd": "^10.1.0",
     "eslint": "8.26.0",
     "eslint-config-airbnb": "19.0.4",

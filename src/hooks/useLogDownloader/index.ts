@@ -111,7 +111,7 @@ const useLogDownloader = (url: string) => {
             const lines = buffer.split("\n");
             buffer = lines.pop() || "";
             result = result.concat(lines);
-            if (result.length > 2000000) {
+            if (result.length > 2500000) {
               abortController.abort();
               setError(`Log file too large  ${result.length} lines`);
 

@@ -5,7 +5,5 @@ import App from "./App";
 
 initializeBugsnag();
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <App />
 );
